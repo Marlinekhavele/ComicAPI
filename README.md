@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 # ERD diagram
 
-![alt text](comic.jpeg "ERD")
+![alt text](comic.png "ERD")
 
 
 
