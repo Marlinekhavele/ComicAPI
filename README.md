@@ -19,3 +19,12 @@ source env/bin/activate
 
 # install deps
 pip install -r requirements.txt
+
+
+# ERD diagram
+
+![alt text](comic.jpeg "ERD")
+
+
+
+ 
