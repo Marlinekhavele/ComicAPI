@@ -21,18 +21,6 @@ class Comic(models.Model):
         return self.title
 
 
-class Story(models.Model):
-    comic_id = models.ForeignKey("Comic", on_delete=models.CASCADE)
-    title = models.CharField(_("Story title"), max_length=128)
-    creator_id = models.ForeignKey("Creator", on_delete=models.CASCADE)
-    character_id = models.ForeignKey("Character", on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    updated_at = models.DateTimeField(auto_now=True, editable=False)
-
-    def ___str___(self):
-        return self.title
-
-
 class Character(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -52,4 +40,22 @@ class Creator(models.Model):
 
     def ___str___(self):
         return self.name
+
+
+class Story(models.Model):
+    title = models.CharField(_("Story title"), max_length=128)
+    comic = models.ForeignKey(
+        Comic, on_delete=models.CASCADE, related_name="comic"
+    )
+    creator = models.ForeignKey(
+        Creator, on_delete=models.CASCADE, related_name="creator"
+    )
+    character = models.ForeignKey(
+        Character, on_delete=models.CASCADE, related_name="character"
+    )
+    created_at = models.DateTimeField(auto_now_add=True, editable=False)
+    updated_at = models.DateTimeField(auto_now=True, editable=False)
+
+    def ___str___(self):
+        return self.title
 
