@@ -16,7 +16,6 @@ class ComicSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         )
-            
 
 
 class CharacterSerializer(serializers.ModelSerializer):
@@ -25,8 +24,8 @@ class CharacterSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "name",
-            "description",
             "image",
+            "description",
             "created_at",
             "updated_at",
         )
@@ -45,9 +44,9 @@ class CreatorSerializer(serializers.ModelSerializer):
 
 
 class StorySerializer(serializers.ModelSerializer):
-    creator = CreatorSerializer()
-    comic = ComicSerializer()
-    character = CharacterSerializer()
+    # creator = CreatorSerializer()
+    # comic = ComicSerializer()
+    # character = CharacterSerializer()
 
     class Meta:
         model = Story
@@ -60,3 +59,13 @@ class StorySerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         )
+
+        def create(self, validated_data):
+            comic = Comic.objects.get(pk=validated_data["comic"])
+            character = Character.objects.get(pk=validated_data["character"])
+            creator = Creator.objects.get(pk=validated_data["creator"])
+            story = Story.objects.create(
+                comic=comic, character=character, creator=creator
+            )
+            return story
+
