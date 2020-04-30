@@ -45,7 +45,7 @@ class Creator(models.Model):
 class Story(models.Model):
     title = models.CharField(_("Story title"), max_length=128)
     comic = models.ForeignKey(
-        Comic, on_delete=models.CASCADE, related_name="comic"
+        Comic, on_delete=models.CASCADE, related_name="stories"
     )
     creator = models.ForeignKey(
         Creator, on_delete=models.CASCADE, related_name="creator"

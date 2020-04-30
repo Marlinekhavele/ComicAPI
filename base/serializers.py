@@ -29,6 +29,7 @@ class CharacterSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         )
+        
 
 
 class CreatorSerializer(serializers.ModelSerializer):
@@ -41,6 +42,7 @@ class CreatorSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         )
+        
 
 
 class StorySerializer(serializers.ModelSerializer):

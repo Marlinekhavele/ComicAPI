@@ -1,5 +1,6 @@
 from django.urls import path, include
 from rest_framework import routers
+from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 
 router = routers.DefaultRouter()
@@ -10,5 +11,15 @@ router.register("story", views.StoryViewSet)
 
 
 urlpatterns = [
+    path(
+        "stories-in-comic/<int:pk>/",
+        views.StoryByComicView.as_view(),
+        name="stories-in-comic",
+    ),
+    path(
+        "characters-in-comic/<int:pk>/",
+        views.CharacterByComicView.as_view(),
+        name="characters-in-comic",
+    ),
     path("", include(router.urls)),
 ]
