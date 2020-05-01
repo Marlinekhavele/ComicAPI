@@ -6,6 +6,7 @@ from django.utils.translation import gettext as _
 
 # Create your models here.
 class Comic(models.Model):
+    """ Comic Model"""
     title = models.CharField(_("Comic's title"), max_length=128)
     issue = models.CharField(max_length=100)
     image = models.URLField(blank=True, null=True)
@@ -22,6 +23,7 @@ class Comic(models.Model):
 
 
 class Character(models.Model):
+    """ Character Model"""
     name = models.CharField(max_length=100)
     description = models.TextField()
     image = models.URLField(blank=True, null=True)
@@ -33,6 +35,7 @@ class Character(models.Model):
 
 
 class Creator(models.Model):
+    """ Creator Model"""
     name = models.CharField(max_length=100)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
@@ -43,6 +46,7 @@ class Creator(models.Model):
 
 
 class Story(models.Model):
+    """ Story Model"""
     title = models.CharField(_("Story title"), max_length=128)
     comic = models.ForeignKey(
         Comic, on_delete=models.CASCADE, related_name="stories"
@@ -58,4 +62,3 @@ class Story(models.Model):
 
     def ___str___(self):
         return self.title
-
