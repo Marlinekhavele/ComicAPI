@@ -57,7 +57,7 @@ class ComicTestCase(TestCase):
     #     """Test the api can get a comic."""
     #     comic = Comic.objects.get(id=1)
     #     response = self.client.get(
-    #         '/comic/',
+    #         'api/comic/',
     #         kwargs={'pk': comic.id}, format="json")
 
     #     self.assertEqual(response.status_code, status.HTTP_200_OK)

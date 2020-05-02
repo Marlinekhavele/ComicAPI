@@ -12,7 +12,7 @@ dist/
 *.egg-info/
 build/
 .envrc
-.env
+env
 .DS_Store
 run
 /assets/
