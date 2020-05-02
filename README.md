@@ -35,7 +35,7 @@ pip install -r requirements.txt
 #Data model design
 # ERD diagram
 ![alt text](comic.jpeg "ERD")
-![Screenshot](Comic.jpg)
+![Screenshot](Comic.png)
 
 
  
