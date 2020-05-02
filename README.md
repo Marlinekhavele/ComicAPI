@@ -20,8 +20,17 @@ source env/bin/activate
 # install deps
 pip install -r requirements.txt
 
-#Visit [http://localhost:8080/api/
-List all the APIs
+#Visit List all the APIs
+
+[http://localhost:8080/api/]
+#Visit List all the APIs
+
+ [http://18.203.102.108/api/]
+
+# API docs
+[http://localhost:8080/docs/]
+
+
 
 
 # ERD diagram

@@ -25,7 +25,7 @@ SECRET_KEY = "!2x*@8+gbg*c%v=ezsdt1fn^-p3v!@6-ran=3r1$6*ezo+mt6@"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,7 +90,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "comic",
-        "USER": "postgres",
+        "USER": "comic_user",
         "PASSWORD": "password",
         "HOST": "localhost",
         "PORT": "5432",
@@ -147,4 +147,3 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
-
