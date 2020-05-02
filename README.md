@@ -22,6 +22,8 @@ pip install -r requirements.txt
 
 #Visit List all the APIs localhost
 [http://localhost:8080/api/]
+![alt tag](list.png)
+
 
 #Visit List all the APIs
 [http://18.203.102.108/api/]
@@ -34,7 +36,6 @@ pip install -r requirements.txt
 
 #Data model design
 # ERD diagram
-![alt tag](comic.png)
 
 
 
