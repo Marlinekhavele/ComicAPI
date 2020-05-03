@@ -86,16 +86,28 @@ WSGI_APPLICATION = "app.wsgi.application"
 #     }
 # }
 
+# local database
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "comic",
-        "USER": "comic_user",
+        "USER": "postgres",
         "PASSWORD": "password",
         "HOST": "localhost",
         "PORT": "5432",
     }
 }
+# server database
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         "NAME": "comic",
+#         "USER": "comic_user",
+#         "PASSWORD": "password",
+#         "HOST": "localhost",
+#         "PORT": "5432",
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
