@@ -28,8 +28,31 @@ pip install -r requirements.txt
 # API docs that shows all the endpoints
 [http://localhost:8080/docs/]
 
+####Frontend
+# comic-manager
 
+## Project setup
+```
+npm install
+```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #Data model design
 # ERD diagram
