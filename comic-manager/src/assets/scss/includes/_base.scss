@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Khand:400,500,600,700|Roboto:300,400,500,700,900|Jost&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $dark;
+  font-family: "Roboto";
+}
+
+hr {
+  appearance: none;
+  border: none;
+  border-top: solid 1px lighten($dark, 70%);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}

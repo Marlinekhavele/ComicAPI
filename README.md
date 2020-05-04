@@ -19,6 +19,7 @@ source env/bin/activate
 
 # install deps
 pip install -r requirements.txt
+
 #Visit List all the APIs localhost
 [http://localhost:8080/api/]
 

@@ -1,0 +1,57 @@
+@media screen and (min-width: $sm) {
+  .card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: $md-radius;
+    overflow: hidden;
+
+    &-burner {
+      margin-right: 10px;
+      height: 100px;
+      width: 100px;
+      flex: 0 0 100px;
+      border-radius: $md-radius;
+      overflow: hidden;
+    }
+
+    &-info {
+      .title {
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 1em;
+        color: $dark;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .author,
+      .price {
+        font-family: "Jost";
+        font-weight: 500;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $md) {
+  hr {
+    display: none;
+  }
+
+  .card {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+
+    &-burner {
+      margin: 10px 0;
+      height: 200px;
+      width: 250px;
+      flex: 0 0 250px;
+    }
+  }
+}
