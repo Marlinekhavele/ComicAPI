@@ -39,6 +39,8 @@ yarn install
 ```
 yarn serve
 ```
+![alt text](tt.png "comic layout")
+
 ### Compiles and minifies for production
 ```
 yarn build
