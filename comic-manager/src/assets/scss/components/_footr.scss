@@ -1,0 +1,15 @@
+@media screen and (min-width: $sm) {
+  .footr {
+    width: 100vw;
+    background: darken($dark, 30%);
+  }
+
+  .foo {
+    &-wrapper {
+      margin: auto;
+      padding: 10px 20px;
+      width: 100%;
+      max-width: $lg;
+    }
+  }
+}

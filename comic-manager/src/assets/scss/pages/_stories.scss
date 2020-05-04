@@ -1,0 +1,30 @@
+@media screen and (min-width: $sm) {
+  .story {
+    &-burner {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    &-info {
+      padding: 10px;
+
+      .title,
+      .price {
+        font-family: "Khand";
+      }
+
+      .price {
+        font-size: 1.5em;
+        color: $secondary;
+      }
+
+      .author {
+        font-family: "Jost";
+      }
+    }
+
+    &-details {
+      padding: 10px;
+    }
+  }
+}

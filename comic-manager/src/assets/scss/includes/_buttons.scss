@@ -1,0 +1,76 @@
+.btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: $sm-radius;
+  transition: background 0.1s ease-in;
+  transition: transform 0.5s;
+  font-family: "Jost";
+  color: lighten($light, 100%);
+  border-bottom: solid 3px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &-neutral {
+    @extend .btn;
+    background: transparent;
+    color: $dark;
+    border: none;
+
+    &:hover {
+      background: $light;
+    }
+  }
+
+  &-primary {
+    @extend .btn;
+    background: $primary;
+    border-color: darken($primary, 15%);
+
+    &:hover {
+      background: darken($primary, 10%);
+    }
+  }
+
+  &-secondary {
+    @extend .btn;
+    background: $secondary;
+    border-color: darken($secondary, 15%);
+
+    &:hover {
+      background: darken($secondary, 10%);
+    }
+  }
+
+  &-block {
+    @extend .btn;
+    display: block;
+    width: 100%;
+  }
+
+  &-flex {
+    @extend .btn;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: auto;
+    }
+  }
+
+  &-rounded {
+    @extend .btn;
+    height: 40px;
+    width: 40px;
+    flex: 0 0 40px;
+    border-radius: 50%;
+  }
+}
