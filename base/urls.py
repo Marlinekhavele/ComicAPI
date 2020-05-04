@@ -8,7 +8,7 @@ router.register("comic", views.ComicViewSet)
 router.register("character", views.CharacterViewSet)
 router.register("creator", views.CreatorViewSet)
 router.register("story", views.StoryViewSet)
-
+# router.register("tags", views.TagViewSet)
 
 urlpatterns = [
     path(
