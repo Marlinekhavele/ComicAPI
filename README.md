@@ -31,9 +31,12 @@ Visit List all the APIs documentation
 Visit List all the APIs localhost
 [http://localhost:8080/api/](http://localhost:8080/api/)
 
+
 Visit List all the APIs on the server
 [http://52.49.227.229/api/](http://localhost:8080/api/)
- API docs that shows all the endpoints
+
+
+API docs that shows all the endpoints
 [http://52.49.227.229/docs/](http://localhost:8080/docs/)
 ```
 
