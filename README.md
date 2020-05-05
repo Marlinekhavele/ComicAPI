@@ -24,7 +24,8 @@ pip install -r requirements.txt
 python manage.py createsuperuser
 python manage.py migrate
 python manage.py runserver
-
+# install deps
+```
 Visit List all the APIs documentation
 [http://localhost:8080/docs/](http://localhost:8080/docs/)
 
@@ -42,7 +43,7 @@ API docs that shows all the endpoints
 
 ## Project setup Frontend
 yarn install
-```
+
 ### Compiles and hot-reloads for development
 
 yarn serve
