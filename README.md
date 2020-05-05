@@ -24,17 +24,16 @@ python manage.py migrate
 python manage.py runserver
 
 #Visit List all the APIs localhost
-[http://localhost:8080/api/](http://localhost:8080/api)
+[http://localhost:8080/api/](http://localhost:8080/api/)
 
 #Visit List all the APIs
-[http://52.49.227.229/api/](http://localhost:8080/api)
+[http://52.49.227.229/api/](http://localhost:8080/api/)
 
 # API docs that shows all the endpoints
-[http://52.49.227.229/docs/](http://localhost:8080/docs)
+[http://52.49.227.229/docs/](http://localhost:8080/docs/)
 
 ####Frontend
 #comic-manager
-
 ## Project setup
 ```
 yarn install
@@ -53,6 +52,7 @@ yarn build
 ```
 yarn lint
 ```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
