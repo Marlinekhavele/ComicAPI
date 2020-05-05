@@ -1,6 +1,7 @@
 .btn {
   appearance: none;
   background: none;
+  display: block;
   border: none;
   padding: 8px 16px;
   border-radius: $sm-radius;
@@ -50,11 +51,36 @@
     }
   }
 
+  &-info {
+    @extend .btn;
+    background: $accent2;
+    border-color: darken($accent2, 15%);
+
+    &:hover {
+      background: darken($accent2, 10%);
+    }
+  }
+
   &-block {
     @extend .btn;
-    display: block;
     width: 100%;
     flex: 0 0 100%;
+  }
+
+  &-half-block {
+    @extend .btn;
+    margin: auto;
+    width: 50%;
+    flex: 0 0 50%;
+  }
+
+  &-lg {
+    padding: 10px 20px;
+  }
+
+  &-sm {
+    padding: 4px 8px;
+    font-size: 0.9em;
   }
 
   &-flex {
@@ -69,9 +95,12 @@
 
   &-rounded {
     @extend .btn;
+    padding: 0;
     height: 40px;
     width: 40px;
     flex: 0 0 40px;
+    line-height: 40px;
+    text-align: center;
     border-radius: 50%;
   }
 }

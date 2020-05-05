@@ -2,13 +2,14 @@
   <div>
     <navbar />
     <div class="container">
+      <subnav />
       <div v-show="loading">
         <loader />
       </div>
       <div class="container-flex">
-        <div v-for="comic in comics" :key="comic.id">
+        <div v-for="creator in creators" :key="creator.id">
           <div class="flex-item">
-            <comic-card :comic="comic" />
+            <creator-card :creator="creator" />
           </div>
         </div>
       </div>
@@ -18,21 +19,23 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-import ComicCard from "@/components/ComicCard.vue";
+import { mapActions, mapGetters } from "vuex";
+import Subnav from "@/components/Subnav.vue";
+import CreatorCard from "@/components/CreatorCard.vue";
 
 export default {
   components: {
-    ComicCard
+    Subnav,
+    CreatorCard
   },
   methods: {
-    ...mapActions(["fetchComics"])
+    ...mapActions(["fetchCreators"])
   },
   computed: {
-    ...mapGetters(["loading", "comics"])
+    ...mapGetters(["loading", "creators"])
   },
   created() {
-    this.fetchComics();
+    this.fetchCreators();
   }
 };
 </script>

@@ -6,9 +6,9 @@
         <loader />
       </div>
       <div class="container-flex">
-        <div v-for="comic in comics" :key="comic.id">
+        <div v-for="story in stories" :key="story.id">
           <div class="flex-item">
-            <comic-card :comic="comic" />
+            <story-card :story="story" />
           </div>
         </div>
       </div>
@@ -18,21 +18,21 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-import ComicCard from "@/components/ComicCard.vue";
+import { mapActions, mapGetters } from "vuex";
+import StoryCard from "@/components/StoryCard.vue";
 
 export default {
   components: {
-    ComicCard
+    StoryCard
   },
   methods: {
-    ...mapActions(["fetchComics"])
+    ...mapActions(["fetchStories"])
   },
   computed: {
-    ...mapGetters(["loading", "comics"])
+    ...mapGetters(["loading", "stories"])
   },
   created() {
-    this.fetchComics();
+    this.fetchStories();
   }
 };
 </script>

@@ -1,0 +1,23 @@
+.input {
+  appearance: none;
+  padding: 10px 15px;
+  font-family: "Roboto";
+  display: block;
+  width: 100%;
+  border: solid 2px lighten($dark, 30%);
+  border-radius: $sm-radius;
+  background: lighten($light, 100%);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}

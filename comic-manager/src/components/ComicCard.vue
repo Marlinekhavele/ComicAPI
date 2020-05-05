@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="comic-card">
     <div class="card">
       <div class="card-burner">
         <router-link :to="`/comic/${comic.id}`">

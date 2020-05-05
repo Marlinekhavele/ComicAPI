@@ -22,6 +22,7 @@
     left: 0;
     width: 100vw;
     background: $primary;
+    z-index: 5;
   }
 
   .nav-wrapper,
@@ -120,6 +121,14 @@
         display: block;
       }
     }
+  }
+
+  .subnav {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: solid 1px $light;
   }
 }
 

@@ -13,17 +13,14 @@
             <router-link to="/">ComicHub</router-link>
           </div>
           <button class="btn-rounded btn-neutral" @click="toggleNav">
-            <font-awesome-icon :icon="['fas','times']" />
+            <font-awesome-icon :icon="['fas', 'times']" />
           </button>
         </div>
         <li class="nav-item">
-          <router-link to="#!">Link 1</router-link>
+          <router-link to="/stories">Stories</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="#!">Link 1</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="#!">Link 1</router-link>
+          <router-link to="/creators">Creators</router-link>
         </li>
       </ul>
       <div class="nav-controlls">
@@ -54,14 +51,14 @@ export default {
         document.body.classList.add("overflow-hidden");
       }
 
-      window.onmouseup = event => {
+      window.onmouseup = (event) => {
         if (event.target.closest(".nav-items")) return;
         navItems.classList.remove("show");
         document.body.classList.remove("overlay");
         document.body.classList.remove("overflow-hidden");
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

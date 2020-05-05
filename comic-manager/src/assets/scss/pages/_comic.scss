@@ -35,6 +35,22 @@
         font-family: "Jost";
       }
     }
+
+    &-details {
+      padding: 10px;
+
+      h1 {
+        font-family: "Jost";
+      }
+
+      .story {
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 900;
+        letter-spacing: 2px;
+        font-family: "Khand";
+      }
+    }
   }
 }
 
@@ -50,6 +66,7 @@
 @media screen and (min-width: $lg) {
   .comic {
     &-header {
+      padding: 10px;
       flex-flow: row nowrap;
     }
 
@@ -62,6 +79,7 @@
     &-burner {
       height: 400px;
       max-height: unset;
+      border-radius: $md-radius;
     }
   }
 }

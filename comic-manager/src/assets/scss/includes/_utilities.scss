@@ -1,117 +1,136 @@
-/* Typography */
-.txt {
-  &-left {
-    text-align: left;
-  }
-  &-right {
-    text-align: right;
-  }
-  &-center {
-    text-align: center;
-  }
-}
-
-/* Layout */
-.container {
-  margin: auto;
-  margin-top: 55px;
-  width: 100%;
-  max-width: $lg;
-  overflow: hidden;
-}
-
-.d {
-  &-none {
-    display: none;
+@media screen and (min-width: $sm) {
+  /* Typography */
+  .txt {
+    &-left {
+      text-align: left;
+    }
+    &-right {
+      text-align: right;
+    }
+    &-center {
+      text-align: center;
+    }
   }
 
-  &-block {
-    display: block;
-  }
-
-  &-flex {
-    display: flex;
-  }
-
-  &-grid {
-    display: grid;
-  }
-}
-
-.f {
-  &-left {
-    float: left;
-  }
-
-  &-right {
-    float: right;
-  }
-}
-
-@for $i from 1 through $space {
-  .p-#{$i} {
-    padding: ($i * 10px);
-  }
-}
-
-@for $i from 1 through $space {
-  .px-#{$i} {
-    padding: 0 ($i * 10px);
-  }
-}
-
-@for $i from 1 through $space {
-  .py-#{$i} {
-    padding: ($i * 10px) 0;
-  }
-}
-
-@for $i from 1 through $space {
-  .m-#{$i} {
-    margin: ($i * 10px);
-  }
-}
-
-@for $i from 1 through $space {
-  .mx-#{$i} {
-    margin: 0 ($i * 10px);
-  }
-}
-
-@for $i from 1 through $space {
-  .my-#{$i} {
-    margin: ($i * 10px) 0;
-  }
-}
-
-.clearfix::after {
-  content: "";
-  display: block;
-  width: 100%;
-  clear: both;
-}
-
-.overflow {
-  &-auto {
-    overflow: auto;
-  }
-
-  &-scroll {
-    overflow: scroll;
-  }
-
-  &-hidden {
+  /* Layout */
+  .container {
+    margin: auto;
+    margin-top: 55px;
+    width: 100%;
+    max-width: $lg;
     overflow: hidden;
   }
+
+  .container-flex {
+    padding: 10px;
+  }
+
+  .d {
+    &-none {
+      display: none;
+    }
+
+    &-block {
+      display: block;
+    }
+
+    &-flex {
+      display: flex;
+    }
+
+    &-grid {
+      display: grid;
+    }
+  }
+
+  .f {
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+  }
+
+  @for $i from 1 through $space {
+    .p-#{$i} {
+      padding: ($i * 10px);
+    }
+  }
+
+  @for $i from 1 through $space {
+    .px-#{$i} {
+      padding: 0 ($i * 10px);
+    }
+  }
+
+  @for $i from 1 through $space {
+    .py-#{$i} {
+      padding: ($i * 10px) 0;
+    }
+  }
+
+  @for $i from 1 through $space {
+    .m-#{$i} {
+      margin: ($i * 10px);
+    }
+  }
+
+  @for $i from 1 through $space {
+    .mx-#{$i} {
+      margin: 0 ($i * 10px);
+    }
+  }
+
+  @for $i from 1 through $space {
+    .my-#{$i} {
+      margin: ($i * 10px) 0;
+    }
+  }
+
+  .clearfix::after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  .overflow {
+    &-auto {
+      overflow: auto;
+    }
+
+    &-scroll {
+      overflow: scroll;
+    }
+
+    &-hidden {
+      overflow: hidden;
+    }
+  }
+
+  /* Fx */
+  .overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparentize(darken($dark, 100%), 0.5);
+  }
 }
 
-/* Fx */
-.overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: transparentize(darken($dark, 100%), 0.5);
+@media screen and (min-width: $md) {
+  .container-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+  }
+
+  .flex-item {
+    margin: 5px;
+  }
 }

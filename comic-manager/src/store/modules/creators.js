@@ -2,34 +2,34 @@ import axios from "axios";
 
 export default {
   state: {
-    characters: [],
+    creators: [],
   },
   getters: {
-    characters: (state) => state.characters,
+    creators: (state) => state.creators,
   },
   mutations: {
-    SET_CHARACTERS: (state, characters) => {
-      state.characters = characters;
+    SET_CREATORS: (state, creators) => {
+      state.creators = creators;
     },
   },
   actions: {
-    fetchCharacters({ commit }) {
+    fetchCreators({ commit }) {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
-        .get("http://52.49.227.229/api/character/?format=json")
+        .get("http://52.49.227.229/api/creator/?format=json")
         .then((res) => {
           commit("SET_LOADING_STATUS", false, { root: true });
-          commit("SET_CHARACTERS", res.data);
+          commit("SET_CREATORS", res.data);
         })
         .catch((err) => console.log(err));
     },
-    fetchCharacterById({ commit }, characterId) {
+    fetchCreatorById({ commit }, creatorId) {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
-        .get(`http://52.49.227.229/api/character/${characterId}/?format=json`)
+        .get(`http://52.49.227.229/api/creator/${creatorId}/?format=json`)
         .then((res) => {
           commit("SET_LOADING_STATUS", false, { root: true });
-          commit("SET_CHARACTERS", res.data);
+          commit("SET_CREATOR", res.data);
         })
         .catch((err) => console.log(err));
     },

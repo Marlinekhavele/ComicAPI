@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import stories from "./modules/stories";
 import comics from "./modules/comics";
+import creators from "./modules/creators";
 
 Vue.use(Vuex);
 
@@ -20,5 +21,6 @@ export default new Vuex.Store({
   modules: {
     stories,
     comics,
+    creators,
   },
 });

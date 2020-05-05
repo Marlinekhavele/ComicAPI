@@ -11,4 +11,18 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSearch, faShoppingBag, faBars, faTimes);
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faSearch,
+  faShoppingBag,
+  faBars,
+  faTimes,
+  faTwitter,
+  faFacebook,
+  faInstagram
+);

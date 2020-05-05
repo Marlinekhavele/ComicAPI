@@ -14,12 +14,19 @@
           <p class="author">{{ comicIssue }} - {{ comic.pages }}pages</p>
           <p class="price">Ksh. {{ comic.price }}</p>
           <p class="p-date my-1">Published: {{ commicPublishDate }}</p>
-          <button class="btn btn-secondary btn-block btn-flex my-2">
+          <button class="btn btn-secondary btn-block btn-flex btn-lg my-2">
             <font-awesome-icon :icon="['fas','shopping-bag']" />
             <span>Add to bag</span>
           </button>
         </div>
       </header>
+      <div class="comic-details">
+        <h1>Stories</h1>
+        <hr />
+        <div v-for="story in comicStories" :key="story.id">
+          <div class="story btn btn-info btn-lg">{{ story.title }}</div>
+        </div>
+      </div>
     </div>
     <footr />
   </div>
@@ -28,27 +35,23 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 
-import Navbar from "@/components/Navbar.vue";
-import Footr from "@/components/Footr.vue";
-
 export default {
-  components: {
-    Navbar,
-    Footr
-  },
   data() {
     return {
       comicId: this.$route.params.id
     };
   },
   methods: {
-    ...mapActions(["fetchComicById"]),
+    ...mapActions(["fetchComicById", "fetchStoriesByComic"]),
     getComic() {
       this.fetchComicById(this.comicId);
+    },
+    getStories() {
+      this.fetchStoriesByComic(this.comicId);
     }
   },
   computed: {
-    ...mapGetters(["loading", "comics"]),
+    ...mapGetters(["loading", "comics", "stories"]),
     comic() {
       return this.comics;
     },
@@ -60,10 +63,14 @@ export default {
     commicPublishDate() {
       const publishDate = new Date(this.comic.date_published);
       return publishDate.toString();
+    },
+    comicStories() {
+      return this.stories;
     }
   },
   created() {
     this.getComic();
+    this.getStories();
   }
 };
 </script>

@@ -21,3 +21,9 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+.fb-box {
+  padding: 15px 30px;
+  background: transparentize($secondary, 0.8);
+  border-radius: $sm-radius;
+}

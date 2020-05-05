@@ -1,57 +1,132 @@
 @media screen and (min-width: $sm) {
-  .card {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    border-radius: $md-radius;
-    overflow: hidden;
-
-    &-burner {
-      margin-right: 10px;
-      height: 100px;
-      width: 100px;
-      flex: 0 0 100px;
+  .comic-card {
+    .card {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       border-radius: $md-radius;
       overflow: hidden;
+
+      &-burner {
+        margin-right: 10px;
+        height: 100px;
+        width: 100px;
+        flex: 0 0 100px;
+        border-radius: $md-radius;
+        overflow: hidden;
+      }
+
+      &-info {
+        .title {
+          font-family: "Roboto";
+          font-weight: 500;
+          font-size: 1em;
+          color: $dark;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .author,
+        .price {
+          font-family: "Jost";
+          font-weight: 500;
+          font-size: 0.9em;
+        }
+      }
     }
+  }
 
-    &-info {
-      .title {
-        font-family: "Roboto";
-        font-weight: 500;
-        font-size: 1em;
-        color: $dark;
+  .story-card {
+    .card {
+      padding: 15px;
+      background: lighten($light, 100%);
+      border: solid 2px $accent2;
+      border-radius: $sm-radius;
+      box-shadow: 3px 3px 0 $accent2;
 
-        &:hover {
-          text-decoration: underline;
+      &-info {
+        a,
+        .title {
+          color: $accent2;
+        }
+
+        .title {
+          font-family: "Khand";
+        }
+
+        .source {
+          font-family: "Jost";
+        }
+      }
+    }
+  }
+
+  .creator-card {
+    details {
+      margin: 20px auto;
+      width: 100%;
+      border: solid 2px $dark;
+      border-radius: $sm-radius;
+      box-shadow: 3px 3px 0 $dark;
+
+      summary {
+        padding: 10px;
+        background: lighten($light, 100%);
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::-webkit-details-marker {
+          display: none;
         }
       }
 
-      .author,
-      .price {
-        font-family: "Jost";
-        font-weight: 500;
-        font-size: 0.9em;
+      p {
+        padding: 10px;
+        line-height: 1.5em;
+        font-size: 0.95em;
+        background: $light;
       }
     }
   }
 }
 
 @media screen and (min-width: $md) {
-  hr {
-    display: none;
+  .comic-card {
+    hr {
+      display: none;
+    }
   }
 
-  .card {
-    display: block;
-    width: 100%;
-    max-width: 250px;
+  .comic-card {
+    .card {
+      display: block;
+      width: 100%;
+      max-width: 250px;
 
-    &-burner {
-      margin: 10px 0;
-      height: 200px;
-      width: 250px;
-      flex: 0 0 250px;
+      &-burner {
+        margin: 10px 0;
+        height: 200px;
+        width: 250px;
+        flex: 0 0 250px;
+      }
+    }
+  }
+
+  .story-card {
+    .card {
+      margin: 10px;
+    }
+  }
+
+  .creator-card {
+    details {
+      margin: 10px auto;
+      width: 300px;
     }
   }
 }
