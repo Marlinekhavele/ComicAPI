@@ -42,7 +42,7 @@ yarn install
 ```
 yarn serve
 ```
-![alt text](tt.png "Description goes here")
+![alt text](img/tt.png "Description goes here")
 
 ### Compiles and minifies for production
 ```
@@ -58,7 +58,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #Data model design
 # ERD diagram
-![alt text](comic.png "ERD Diagram")
+![alt text](img/comic.png "ERD Diagram")
 
 
 
