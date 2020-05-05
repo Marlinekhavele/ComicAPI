@@ -24,13 +24,13 @@ python manage.py migrate
 python manage.py runserver
 
 #Visit List all the APIs localhost
-[http://localhost:8080/api/]
+[http://localhost:8080/api/](http://localhost:8080/api)
 
 #Visit List all the APIs
-[http://18.203.102.108/api/]
+[http://52.49.227.229/api/](http://localhost:8080/api)
 
 # API docs that shows all the endpoints
-[http://localhost:8080/docs/]
+[http://52.49.227.229/docs/](http://localhost:8080/docs)
 
 ####Frontend
 #comic-manager
