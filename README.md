@@ -48,7 +48,9 @@ npm install
 
 npm run serve
 ```
-![alt text](img/tt.png "Description goes here")
+![alt text](img/1.png "Description goes here")
+![alt text](img/2.png "Description goes here")
+![alt text](img/3.png "Description goes here")
 
 ### Compiles and minifies for production
 
