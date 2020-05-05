@@ -17,7 +17,7 @@ export default {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
         .get(
-          `http://18.203.102.108/api/stories-in-comic/${comcicId}/?format=json`
+          `http://52.49.227.229/api/stories-in-comic/${comcicId}/?format=json`
         )
         .then((res) => {
           commit("SET_STORIES", res.data);

@@ -17,7 +17,7 @@ export default {
     fetchComics({ commit }) {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
-        .get("http://18.203.102.108/api/comic/?format=json")
+        .get("http://52.49.227.229/api/comic/?format=json")
         .then((res) => {
           commit("SET_LOADING_STATUS", false, { root: true });
           commit("SET_COMICS", res.data);
@@ -27,7 +27,7 @@ export default {
     fetchComicById({ commit }, comicId) {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
-        .get(`http://18.203.102.108/api/comic/${comicId}/?format=json`)
+        .get(`http://52.49.227.229/api/comic/${comicId}/?format=json`)
         .then((res) => {
           commit("SET_LOADING_STATUS", false, { root: true });
           commit("SET_COMICS", res.data);
