@@ -35,28 +35,23 @@ python manage.py runserver
 ####Frontend
 #comic-manager
 ## Project setup
-```
 yarn install
-```
+
 ### Compiles and hot-reloads for development
-```
+
 yarn serve
 ```
 ![alt text](img/tt.png "Description goes here")
 
 ### Compiles and minifies for production
-```
+
 yarn build
-```
-### Lints and fixes files
-```
-yarn lint
-```
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-#Data model design
+# Data model design
 # ERD diagram
 ![alt text](img/comic.png "ERD Diagram")
 
