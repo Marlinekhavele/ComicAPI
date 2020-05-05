@@ -12,7 +12,7 @@
 }
 
 /* Layout */
-.content {
+.container {
   margin: auto;
   margin-top: 55px;
   width: 100%;
@@ -31,7 +31,6 @@
 
   &-flex {
     display: flex;
-    background: green;
   }
 
   &-grid {

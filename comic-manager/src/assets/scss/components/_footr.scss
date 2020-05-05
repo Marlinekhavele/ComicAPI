@@ -1,6 +1,8 @@
 @media screen and (min-width: $sm) {
   .footr {
-    width: 100vw;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     background: darken($dark, 30%);
   }
 

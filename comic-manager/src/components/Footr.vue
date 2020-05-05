@@ -2,7 +2,7 @@
   <footer class="footr">
     <div class="foo-wrapper">
       <div class="logo">
-        <a href="/">ComicHub</a>
+        <router-link to="/">ComicHub</router-link>
       </div>
     </div>
   </footer>

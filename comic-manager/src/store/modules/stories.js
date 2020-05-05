@@ -13,7 +13,7 @@ export default {
     },
   },
   actions: {
-    fetchStories({ commit }, comcicId) {
+    fetchStoryById({ commit }, comcicId) {
       commit("SET_LOADING_STATUS", true, { root: true });
       axios
         .get(

@@ -1,0 +1,67 @@
+@media screen and (min-width: $sm) {
+  .comic {
+    &-header {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &-burner,
+    &-info {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    &-burner {
+      height: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    &-info {
+      padding: 10px;
+
+      .title,
+      .price {
+        font-family: "Khand";
+      }
+
+      .price {
+        font-size: 1.5em;
+        color: $secondary;
+      }
+
+      .author {
+        font-family: "Jost";
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $md) {
+  .comic {
+    &-burner {
+      height: 400px;
+      max-height: unset;
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .comic {
+    &-header {
+      flex-flow: row nowrap;
+    }
+
+    &-burner,
+    &-info {
+      width: 50%;
+      flex: 0 0 50%;
+    }
+
+    &-burner {
+      height: 400px;
+      max-height: unset;
+    }
+  }
+}

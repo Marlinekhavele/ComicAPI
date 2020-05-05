@@ -2,12 +2,12 @@
   <div>
     <div class="card">
       <div class="card-burner">
-        <router-link :to="`/stories/${comic.id}`">
+        <router-link :to="`/comic/${comic.id}`">
           <img :src="comic.image" :alt="comic.title" height="100%" />
         </router-link>
       </div>
       <div class="card-info">
-        <router-link :to="`/stories/${comic.id}`">
+        <router-link :to="`/comic/${comic.id}`">
           <h1 class="title">{{ comic.title }}</h1>
         </router-link>
         <p

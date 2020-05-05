@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar />
-    <div class="content">
+    <div class="container">
       <div v-show="loading">
         <loader />
       </div>

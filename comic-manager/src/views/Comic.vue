@@ -1,29 +1,25 @@
 <template>
   <div>
     <navbar />
-    <div class="content">
-      <div v-if="loading">
+    <div class="container">
+      <div v-show="loading">
         <loader />
       </div>
-      <div v-show="!loading">
-        <header class="story-header">
-          <div class="story-burner">
-            <img :src="comic.image" :alt="comic.title" height="100%" />
-          </div>
-          <div class="story-info">
-            <h1 class="title">{{ comic.title }}</h1>
-            <p class="author">{{ comicIssue }} - {{ comic.pages }}pages</p>
-            <p class="price">Ksh. {{ comic.price }}</p>
-            <p class="p-date">Published: {{ commicPublishDate }}</p>
-          </div>
-        </header>
-        <div class="story-details">
+      <header class="comic-header">
+        <div class="comic-burner">
+          <img :src="comic.image" :alt="comic.title" height="100%" />
+        </div>
+        <div class="comic-info">
+          <h1 class="title">{{ comic.title }}</h1>
+          <p class="author">{{ comicIssue }} - {{ comic.pages }}pages</p>
+          <p class="price">Ksh. {{ comic.price }}</p>
+          <p class="p-date my-1">Published: {{ commicPublishDate }}</p>
           <button class="btn btn-secondary btn-block btn-flex my-2">
             <font-awesome-icon :icon="['fas','shopping-bag']" />
             <span>Add to bag</span>
           </button>
         </div>
-      </div>
+      </header>
     </div>
     <footr />
   </div>

@@ -9,7 +9,7 @@ export default {
     SET_ITEMS: (state, items) => (state.items = items),
   },
   actions: {
-    fetchStories({ commit }, item) {
+    fetchItem({ commit }, item) {
       commit("SET_ITEMS", item);
     },
   },

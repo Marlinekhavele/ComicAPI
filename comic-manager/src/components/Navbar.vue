@@ -5,7 +5,7 @@
         <font-awesome-icon :icon="['fas', 'bars']" />
       </button>
       <div class="logo">
-        <a href="/">ComicHub</a>
+        <router-link to="/">ComicHub</router-link>
       </div>
       <ul class="nav-items">
         <div class="nav-ctrls">
@@ -17,10 +17,10 @@
           </button>
         </div>
         <li class="nav-item">
-          <router-link to="#!">Comics</router-link>
+          <router-link to="#!">Link 1</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="#!">Creator</router-link>
+          <router-link to="#!">Link 1</router-link>
         </li>
         <li class="nav-item">
           <router-link to="#!">Link 1</router-link>
