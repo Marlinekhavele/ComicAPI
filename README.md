@@ -42,17 +42,17 @@ API docs that shows API documentation
 ```
 
 ## Project setup Frontend
-yarn install
+npm install
 
 ### Compiles and hot-reloads for development
 
-yarn serve
+npm run serve
 ```
 ![alt text](img/tt.png "Description goes here")
 
 ### Compiles and minifies for production
 
-yarn build
+npm run build
 
 
 ### Customize configuration
