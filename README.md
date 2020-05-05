@@ -43,7 +43,7 @@ yarn install
 ```
 yarn serve
 ```
-![alt text](tt.png "comic layout")
+![image](tt.png)
 
 ### Compiles and minifies for production
 ```
