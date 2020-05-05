@@ -24,12 +24,12 @@ pip install -r requirements.txt
 python manage.py createsuperuser
 python manage.py migrate
 python manage.py runserver
-# install deps
+
 ```
 Visit List all the APIs documentation
 [http://localhost:8080/docs/](http://localhost:8080/docs/)
 
-Visit List all the APIs localhost
+Visit List all the APIs on localhost
 [http://localhost:8080/api/](http://localhost:8080/api/)
 
 
@@ -37,7 +37,7 @@ Visit List all the APIs on the server
 [http://52.49.227.229/api/](http://localhost:8080/api/)
 
 
-API docs that shows all the endpoints
+API docs that shows API documentation
 [http://52.49.227.229/docs/](http://localhost:8080/docs/)
 ```
 
