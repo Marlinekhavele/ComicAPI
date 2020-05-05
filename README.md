@@ -19,6 +19,9 @@ source env/bin/activate
 
 # install deps
 pip install -r requirements.txt
+python manage.py createsuperuser
+python manage.py migrate
+python manage.py runserver
 
 #Visit List all the APIs localhost
 [http://localhost:8080/api/]

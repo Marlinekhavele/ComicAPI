@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_swagger",
     "base",
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -164,4 +165,3 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
-
