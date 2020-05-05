@@ -23,6 +23,8 @@ python manage.py createsuperuser
 python manage.py migrate
 python manage.py runserver
 
+#Visit List all the APIs documentation
+[http://localhost:8080/doc/](http://localhost:8080/doc/)
 #Visit List all the APIs localhost
 [http://localhost:8080/api/](http://localhost:8080/api/)
 
@@ -32,7 +34,6 @@ python manage.py runserver
 # API docs that shows all the endpoints
 [http://52.49.227.229/docs/](http://localhost:8080/docs/)
 
-####Frontend
 #comic-manager
 ## Project setup
 yarn install
@@ -51,7 +52,6 @@ yarn build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-# Data model design
 # ERD diagram
 ![alt text](img/comic.png "ERD Diagram")
 
