@@ -13,22 +13,26 @@ Run the following commands to get started using virtualenv
 ``` shell
 # once - create virtual environment
 virtualenv env -p python3.6
+```
 
 # activate it
 source env/bin/activate
 
 # install deps
+```
 pip install -r requirements.txt
 python manage.py createsuperuser
 python manage.py migrate
 python manage.py runserver
 
 #Visit List all the APIs documentation
+```
 [http://localhost:8080/docs/](http://localhost:8080/docs/)
+
 #Visit List all the APIs localhost
 [http://localhost:8080/api/](http://localhost:8080/api/)
 
-#Visit List all the APIs
+#Visit List all the APIs on the server
 [http://52.49.227.229/api/](http://localhost:8080/api/)
 
 # API docs that shows all the endpoints
