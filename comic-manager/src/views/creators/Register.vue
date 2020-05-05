@@ -1,3 +1,4 @@
+ 
 <template>
   <div class="creator-registration">
     <navbar />
@@ -8,7 +9,7 @@
           <p>{{ fb }}</p>
         </div>
       </div>
-      <form method="POST" id="registerCreator" @submit.prevent="registerCreator" autocomplete="off">
+      <form id="registerCreator" @submit.prevent="register" autocomplete="off">
         <div class="form-group">
           <label for="name" class="label">Name</label>
           <input type="text" v-model="creator.name" id="name" class="input" placeholder="Name" />
@@ -33,7 +34,6 @@
 
 <script>
 import axios from "axios";
-
 export default {
   data() {
     return {
@@ -45,7 +45,7 @@ export default {
     };
   },
   methods: {
-    registerCreator() {
+    register() {
       if (!this.creator.name) {
         this.fb = "Please fill out the name";
         return false;
@@ -55,9 +55,11 @@ export default {
       } else {
         this.fb = null;
         axios
-          .post("http://52.49.227.229/api/creator", this.creator)
+          .post("http://52.49.227.229/api/creator/", this.creator)
           .then(() => {
-            window.location.href("/creators");
+            this.creator.name = null;
+            this.creator.description = null;
+            this.fb = "Successfully registered creator";
             return true;
           })
           .catch(err => console.log(err));

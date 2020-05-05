@@ -22,7 +22,6 @@
 import { mapActions, mapGetters } from "vuex";
 import Subnav from "@/components/Subnav.vue";
 import CreatorCard from "@/components/CreatorCard.vue";
-
 export default {
   components: {
     Subnav,
