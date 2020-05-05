@@ -42,7 +42,7 @@ yarn install
 ```
 yarn serve
 ```
-![image](tt.png)
+![alt text](tt.png "Description goes here")
 
 ### Compiles and minifies for production
 ```
