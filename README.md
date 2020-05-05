@@ -25,22 +25,21 @@ python manage.py createsuperuser
 python manage.py migrate
 python manage.py runserver
 
-#Visit List all the APIs documentation
-```
+Visit List all the APIs documentation
 [http://localhost:8080/docs/](http://localhost:8080/docs/)
 
-#Visit List all the APIs localhost
+Visit List all the APIs localhost
 [http://localhost:8080/api/](http://localhost:8080/api/)
 
-#Visit List all the APIs on the server
+Visit List all the APIs on the server
 [http://52.49.227.229/api/](http://localhost:8080/api/)
-
-# API docs that shows all the endpoints
+ API docs that shows all the endpoints
 [http://52.49.227.229/docs/](http://localhost:8080/docs/)
+```
 
 ## Project setup Frontend
 yarn install
-
+```
 ### Compiles and hot-reloads for development
 
 yarn serve
