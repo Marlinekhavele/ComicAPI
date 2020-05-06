@@ -12,7 +12,7 @@
         <div class="comic-info">
           <h1 class="title">{{ comic.title }}</h1>
           <p class="author">{{ comicIssue }} - {{ comic.pages }}pages</p>
-          <p class="price">Ksh. {{ comic.price }}</p>
+          <p class="price">$. {{ comic.price }}</p>
           <p class="p-date my-1">Published: {{ commicPublishDate }}</p>
           <button class="btn btn-secondary btn-block btn-flex btn-lg my-2">
             <font-awesome-icon :icon="['fas','shopping-bag']" />
