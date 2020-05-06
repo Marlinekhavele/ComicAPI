@@ -47,6 +47,9 @@ npm install
 ### Compiles and hot-reloads for development
 
 npm run serve
+This screenshots are here due to Netlify not accepting my APIs which are http
+they only accept https.
+
 ```
 ![alt text](img/1.png "Description goes here")
 ![alt text](img/2.png "Description goes here")
