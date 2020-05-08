@@ -2,7 +2,9 @@
 node_modules
 /dist
 
-
+# local env files
+.env.local
+.env.*.local
 
 # Log files
 npm-debug.log*
@@ -18,25 +20,3 @@ yarn-error.log*
 *.sln
 *.sw?
 
-bin
-lib
-lib64
-share
-*.cfg
-env/
-.vscode/
-.idea/
-*.iml
-dist/
-*.egg-info/
-build/
-.envrc
-env
-coverage.xml
-report.html
-.idea
-.pytest_cache/
-htmlcov/
-.coverage
-assets/
-dev-notes.md
