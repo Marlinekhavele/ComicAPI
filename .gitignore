@@ -1,28 +1,11 @@
-*.egg-info
-.cache
-*.pyc
-htmlcov
-.coverage
-*/wheelhouse
-*.sql
-env/
-.env
-.vscode/
-.idea
-*.iml
-dist/
-*.egg-info/
-build/
-.pytest_cache/
-.envrc
-coverage.xml
-report.html
-assets/
-__pycache__
-Notes
+
 .DS_Store
 node_modules
 /dist
+
+# local env files
+.env.local
+.env.*.local
 
 
 # Log files
