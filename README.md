@@ -1,10 +1,14 @@
-COMIC API
+### Well Told Story Interview Solution
+### Writing Well Told story Interview Solution App using Python, Django  Django Rest and VueJs
+### COMIC API
 =========================
+# ERD diagram
+![alt text](img/comic.png "ERD Diagram")
+
 ###### Developer Setup
 -------------------------------
 Follow the following steps to setup your  dev environment
-Get started with virtual env
-----------------------------
+#### Get started with virtual env
 Run the following commands to get started using virtualenv
 ``` shell
 # once - create virtual environment
@@ -18,15 +22,15 @@ source env/bin/activate
 ```
 pip install -r requirements.txt
 python manage.py createsuperuser
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
 ```
-###### Project setup Frontend
+#### Project setup Frontend
 npm install
 
-###### Compiles and hot-reloads for development
-
+#### Compiles and hot-reloads for development
 npm run serve
 This screenshots are here due to Netlify not accepting my APIs which are http
 they only accept https.
@@ -40,12 +44,9 @@ they only accept https.
 
 npm run build
 
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-# ERD diagram
-![alt text](img/comic.png "ERD Diagram")
 
 
 
