@@ -26,16 +26,15 @@ python manage.py runserver
 #### Project setup Frontend
 npm install
 
-#### Compiles and hot-reloads for development
+##### Compiles and hot-reloads for development
 npm run serve
-```
 ![alt text](img/1.png "Description goes here")
 ![alt text](img/2.png "Description goes here")
 ![alt text](img/3.png "Description goes here")
 
-### Compiles and minifies for production
+##### Compiles and minifies for production
 npm run build
-### Customize configuration
+##### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
