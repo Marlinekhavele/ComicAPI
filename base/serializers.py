@@ -1,33 +1,12 @@
 from rest_framework import serializers
 from .models import Comic, Story, Creator, Character
 
-
-# class TagSerializer(serializers.ModelSerializer):
-#     """Tag serializer"""
-#     comic = serializers.SlugRelatedField(
-#         many=True,
-#         read_only=True,
-#         slug_field=("featured", "latest", "trending")
-#     )
-
-#     class Meta:
-#         model = Tag
-#         fields = ("id", "comic", "featured", "latest", "trending")
-
-
 class ComicSerializer(serializers.ModelSerializer):
-    # tags = serializers.SlugRelatedField(
-    #     many=True,
-    #     slug_field=("featured", "latest", "trending"),
-    #     queryset=Tag.objects.all()
-    # )
-
     class Meta:
         model = Comic
         fields = (
             "id",
             "title",
-            # "tags",
             "issue",
             "image",
             "date_published",
@@ -64,10 +43,6 @@ class CreatorSerializer(serializers.ModelSerializer):
 
 
 class StorySerializer(serializers.ModelSerializer):
-    # creator = CreatorSerializer()
-    # comic = ComicSerializer()
-    # character = CharacterSerializer()
-
     class Meta:
         model = Story
         fields = (

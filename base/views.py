@@ -8,15 +8,9 @@ from .serializers import (
     CreatorSerializer,
     CharacterSerializer,
     StorySerializer,
-    # TagSerializer
 )
 from . import models
 from .models import Comic, Creator, Character, Story
-
-
-# class TagViewSet(viewsets.ModelViewSet):
-#     queryset = models.Tag.objects.all()
-#     serializer_class = serializers.TagSerializer
 
 
 class ComicViewSet(viewsets.ModelViewSet):
