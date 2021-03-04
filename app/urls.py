@@ -15,14 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_swagger.views import get_swagger_view
+from django.views.generic import TemplateView
+from rest_framework.schemas import get_schema_view
 
 
-schema_view = get_swagger_view(title="Comic API Documentation")
-
+api_v1_docs = [
+    path('openapi', get_schema_view(
+        title="Comic App",
+        description="Comic APIs",
+        version="1.0.0"
+    ), name='openapi-schema'),
+    path('docs/',TemplateView.as_view(
+        template_name='swagger-docs.html',
+        extra_context={'schema_url':'openapi-schema'}
+    ), name='swagger-ui')
+]
 urlpatterns = [
-    path("docs/", schema_view),
+    path('api/v1/', include(api_v1_docs)),
     path("admin/", admin.site.urls),
-    path("api/", include("base.urls")),
-    path("api-auth/", include("rest_framework.urls")),
+    path("api/v1/", include("base.urls")),
+    path("api-auth/v1/", include("rest_framework.urls")),
 ]
